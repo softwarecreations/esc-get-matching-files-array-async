@@ -1,0 +1,26 @@
+{
+  "name": "esc-get-matching-files-array-async",
+  "version": "0.1.0",
+  "description": "async function that returns an array of files matching regex pattern, recursively inside specified directory.",
+  "main": "main.mjs",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node main.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softwarecreations/esc-get-matching-files-array-async.git"
+  },
+  "keywords": [
+    "minimal-dependencies",
+    "simple"
+  ],
+  "author": "softwarecreations",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/softwarecreations/esc-get-matching-files-array-async/issues"
+  },
+  "homepage": "https://github.com/softwarecreations/esc-get-matching-files-array-async#readme"
+}
