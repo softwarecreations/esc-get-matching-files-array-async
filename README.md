@@ -28,7 +28,7 @@ The problems with glob are (as of 2025-08-15)
 * Slow in some situations
 * Hard to audit and trust
 * Over-complicated
-* Subject to change
+* Subject to change: 11 major versions thus far
 
 ## Installation
 
