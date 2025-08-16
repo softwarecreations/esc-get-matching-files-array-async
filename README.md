@@ -4,7 +4,7 @@ An **async** function that returns an array of files matching a regex pattern, s
 
 ## Want sync version?
 
-[esc-get-matching-files-array](https://github.com/softwarecreations/esc-get-matching-files-array)
+[esc-get-matching-files-array](https://www.npmjs.com/package/esc-get-matching-files-array)
 
 ## Features
 
