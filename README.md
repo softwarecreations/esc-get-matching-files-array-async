@@ -24,7 +24,7 @@ No breaking changes—major changes will result in a new package.
 The problems with glob are (as of 2025-08-15)
 
 * 6 Dependencies
-* 475KiB of code. What the actual fuck?
+* 475KiB package size. What the actual fuck?
 * Slow in some situations
 * Hard to audit and trust
 * Over-complicated
