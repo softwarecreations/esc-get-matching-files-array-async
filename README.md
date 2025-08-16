@@ -1,39 +1,68 @@
 # esc-get-matching-files-array-async
-async function that returns an array of files matching regex pattern, recursively inside specified directory.
 
-## Project goals
-* No dependencies
-* No nonsense
-* Reliable, no radical changes will ever happen.
-* Small, simple, easy to audit, yourself
+An **async** function that returns an array of files matching a regex pattern, searched recursively in a given directory.
 
-If I have ideas for something different, I'll make a new package rather than make breaking changes.
+## Want sync version?
+
+[esc-get-matching-files-array](https://github.com/softwarecreations/esc-get-matching-files-array)
+
+## Features
+
+- **No dependencies**
+- **Stable API**
+- **Simple**
+- **Small: 498 bytes, 6 lines of code**
+- **Easy to audit**
+- **Promise-based async**
+
+No breaking changes—major changes will result in a new package.
 
 ## Inspired by
 
+- `glob`
+
+The problems with glob are (as of 2025-08-15)
+
+* 6 Dependencies
+* 475KiB of code. What the actual fuck?
+* Slow in some situations
+* Hard to audit and trust
+* Over-complicated
+* Subject to change
 
 ## Installation
 
-1. `npm install esc-get-matching-files-array-async`
-
-
-## Use
-```JavaScript
-import foo from 'esc-get-matching-files-array-async';
-
+```bash
+npm install esc-get-matching-files-array-async
 ```
 
-## Notes
+## Usage
 
+```js
+import { getMatchingFilesAP } from 'esc-get-matching-files-array-async';
 
-Have fun!
+const filesA = await getMatchingFilesAP('/some/path', /\.js$/);
+console.log(filesA);
+```
 
-### Say thanks
-Star the repo
+## API
+
+### `getMatchingFilesAP(dirPath: string, filenameRegex?: RegExp): Promise<string[]>`
+
+- **dirPath** (string): Directory to start from.
+- **filenameRegex** (optional RegExp): Pattern to match filenames. Default: `/\.m?js$/`.
+
+Returns a promise that resolves to an array of absolute file paths matching the pattern.
+
+## License
+
+MIT
+
+---
+
+:star: Star the repo:  
 https://github.com/softwarecreations/esc-get-matching-files-array-async
 
-### PR's or issues
-Welcome
+PRs & issues welcome! 
 
-### License
-MIT
+Have fun!

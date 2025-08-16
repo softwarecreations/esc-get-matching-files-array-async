@@ -1,11 +1,10 @@
-#!/usr/bin/env node
-'use strict';
+import fsP from 'node:fs/promises';
+import path from 'node:path';
 
-const fooP = async () => {
-
+export const getMatchingFilesAP = async (dirPath, filenameRegex = /\.m?js$/) => {
+  const filesA = await fsP.readdir( dirPath, { withFileTypes: true } );
+  return ( await Promise.all( filesA.map( async fileO => {
+    const absPath = path.join( dirPath, fileO.name );
+    return fileO.isDirectory() ? await getMatchingFilesAP( absPath, filenameRegex ) : ( filenameRegex.test( fileO.name ) ? [ absPath ] : [] );
+  } ) ) ).flat();
 };
-
-export default fooP;
-
-// delete the shebang if not cli script
-// if it can be CLI or a module, make a (non "main":) executable file with a shebang that imports fooP and uses it with process.argv (see esc-get-project-linecounts)
