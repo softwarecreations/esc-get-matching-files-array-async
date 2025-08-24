@@ -1,8 +1,9 @@
 {
   "name": "esc-get-matching-files-array-async",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "async function that returns an array of files matching regex pattern, recursively inside specified directory.",
   "main": "main.mjs",
+  "types": "main.d.ts",
   "dependencies": {
   },
   "devDependencies": {},

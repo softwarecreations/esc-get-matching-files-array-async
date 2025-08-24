@@ -8,3 +8,5 @@ export declare function getMatchingFilesAP(
   dirPath: string,
   filenameRegex?: RegExp
 ): Promise<string[]>;
+
+export default getMatchingFilesAP;

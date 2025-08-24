@@ -8,3 +8,5 @@ export const getMatchingFilesAP = async (dirPath, filenameRegex = /\.m?js$/) => 
     return fileO.isDirectory() ? await getMatchingFilesAP( absPath, filenameRegex ) : ( filenameRegex.test( fileO.name ) ? [ absPath ] : [] );
   } ) ) ).flat();
 };
+
+export default getMatchingFilesAP;
